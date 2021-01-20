@@ -1,0 +1,151 @@
+<div>
+    <h3>{{'billing.billingInformation' | translate | titlecase}} :</h3>
+</div>
+<form [formGroup]="billingForm" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="firstName">{{'billing.firstName' | translate | titlecase}}</label>
+            <div class="input-group">
+                <input type="text" formControlName="firstName" class="form-control border-right-0"
+                    [ngClass]="{ 'is-invalid': submitted && formControls.firstName.errors }" />
+                <div class="input-group-append">
+                    <span class="input-group-text txt-green border-left-0 bg-white"
+                        [ngClass]="{'border border-danger': submitted && formControls.firstName.errors }">
+                        <i class="fa fa-user"></i>
+                    </span>
+                </div>
+                <div *ngIf="submitted && formControls.firstName.errors" class="invalid-feedback">
+                    <div *ngIf="formControls.firstName.errors.required">{{'billing.firstNameRequired' | translate | titlecase}}</div>
+                    <div *ngIf="formControls.firstName.errors.minlength">{{'billing.firstNameShouldHaveAtleast4characters' | translate | titlecase}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="lastName">{{'billing.lastName' | translate | titlecase}}</label>
+            <div class="input-group">
+                <input type="text" formControlName="lastName" class="form-control border-right-0"
+                    [ngClass]="{ 'is-invalid': submitted && formControls.lastName.errors }" />
+                <div class="input-group-append">
+                    <span class="input-group-text txt-green border-left-0 bg-white"
+                        [ngClass]="{'border border-danger': submitted && formControls.lastName.errors }">
+                        <i class="fa fa-user"></i>
+                    </span>
+                </div>
+                <div *ngIf="submitted && formControls.lastName.errors" class="invalid-feedback">
+                    <div *ngIf="formControls.lastName.errors.required">{{'billing.lastNameRequired' | translate | titlecase}}</div>
+                    <div *ngIf="formControls.lastName.errors.minlength">{{'billing.lastNameShouldHaveAtleast4characters' | translate | titlecase}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="email">{{'billing.email' | translate | titlecase}}</label>
+            <div class="input-group">
+                <input type="text" formControlName="email" class="form-control border-right-0"
+                    [ngClass]="{ 'is-invalid': submitted && formControls.email.errors }" />
+                <div class="input-group-append">
+                    <span class="input-group-text txt-green border-left-0 bg-white"
+                        [ngClass]="{'border border-danger': submitted && formControls.email.errors }">
+                        <i class="fa fa-envelope"></i>
+                    </span>
+                </div>
+                <div *ngIf="submitted && formControls.email.errors" class="invalid-feedback">
+                    <div *ngIf="formControls.email.errors.required">{{'billing.emailRequired' | translate | titlecase}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="phone">{{'billing.phoneNumber' | translate | titlecase}}</label>
+            <div class="input-group">
+                <input type="number" formControlName="phone" class="form-control border-right-0"
+                    [ngClass]="{ 'is-invalid': submitted && formControls.phone.errors }" />
+                <div class="input-group-append">
+                    <span class="input-group-text txt-green border-left-0 bg-white"
+                        [ngClass]="{'border border-danger': submitted && formControls.phone.errors }">
+                        <i class="fa fa-mobile"></i>
+                    </span>
+                </div>
+                <div *ngIf="submitted && formControls.phone.errors" class="invalid-feedback">
+                    <div *ngIf="formControls.phone.errors.required">{{'billing.phoneNumberRequired' | translate | titlecase}}</div>
+                    <div *ngIf="formControls.phone.errors.pattern">{{'billing.notAPhoneNumber' | translate | titlecase}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-12">
+            <label for="address">{{'billing.address' | translate | titlecase}}</label>
+            <div class="input-group">
+                <input type="text" formControlName="address" class="form-control border-right-0"
+                    [ngClass]="{ 'is-invalid': submitted && formControls.address.errors }" />
+                <div class="input-group-append">
+                    <span class="input-group-text txt-green border-left-0 bg-white"
+                        [ngClass]="{'border border-danger': submitted && formControls.address.errors }">
+                        <i class="fa fa-map-marker"></i>
+                    </span>
+                </div>
+                <div *ngIf="submitted && formControls.address.errors" class="invalid-feedback">
+                    <div *ngIf="formControls.address.errors.required">{{'billing.addressRequired' | translate | titlecase}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-12">
+            <label for="city">{{'billing.city' | translate | titlecase}}</label>
+            <div class="input-group">
+                <input type="text" formControlName="city" class="form-control border-right-0"
+                    [ngClass]="{ 'is-invalid': submitted && formControls.city.errors }" />
+                <div class="input-group-append">
+                    <span class="input-group-text txt-green border-left-0 bg-white"
+                        [ngClass]="{'border border-danger': submitted && formControls.city.errors }">
+                        <i class="fa fa-building"></i>
+                    </span>
+                </div>
+                <div *ngIf="submitted && formControls.city.errors" class="invalid-feedback">
+                    <div *ngIf="formControls.city.errors.required">{{'billing.cityRequired' | translate | titlecase}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-12">
+            <label for="country">{{'billing.country' | translate | titlecase}}</label>
+            <div class="input-group">
+                <input type="text" formControlName="country" class="form-control border-right-0"
+                    [ngClass]="{ 'is-invalid': submitted && formControls.country.errors }" />
+                <div class="input-group-append">
+                    <span class="input-group-text txt-green border-left-0 bg-white"
+                        [ngClass]="{'border border-danger': submitted && formControls.country.errors }">
+                        <i class="fa fa-globe"></i>
+                    </span>
+                </div>
+                <div *ngIf="submitted && formControls.country.errors" class="invalid-feedback">
+                    <div *ngIf="formControls.country.errors.required">{{'billing.countryRequired' | translate | titlecase}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-12">
+            <label for="zipcode">{{'billing.zipcode' | translate | titlecase}}</label>
+            <div class="input-group">
+                <input type="number" formControlName="zipcode" class="form-control border-right-0"
+                    [ngClass]="{ 'is-invalid': submitted && formControls.zipcode.errors }" />
+                <div class="input-group-append">
+                    <span class="input-group-text txt-green border-left-0 bg-white"
+                        [ngClass]="{'border border-danger': submitted && formControls.zipcode.errors }">
+                        <i class="fa fa-map-pin"></i>
+                    </span>
+                </div>
+                <div *ngIf="submitted && formControls.zipcode.errors" class="invalid-feedback">
+                    <div *ngIf="formControls.zipcode.errors.required">{{'billing.zipcodeRequired' | translate | titlecase}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button class="btn bg-green">{{'billing.continue' | translate | titlecase}} <i class="fa fa-arrow-right"></i></button>
+    </div>
+</form>

@@ -1,0 +1,83 @@
+<div>
+    <h3>{{'card.cardInformation' | translate | titlecase}}:</h3>
+</div>
+<form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+        <div class="form-group col-md-12">
+            <label for="fullName">{{'card.fullName' | translate | titlecase}}</label>
+            <div class="input-group">
+                <input type="text" formControlName="fullName" class="form-control border-right-0"
+                    [ngClass]="{ 'is-invalid': submitted && formControls.fullName.errors }" />
+                <div class="input-group-append">
+                    <span class="input-group-text txt-green border-left-0 bg-white"
+                        [ngClass]="{'border border-danger': submitted && formControls.fullName.errors }">
+                        <i class="fa fa-user"></i>
+                    </span>
+                </div>
+                <div *ngIf="submitted && formControls.fullName.errors" class="invalid-feedback">
+                    <div *ngIf="formControls.fullName.errors.required">{{'card.fullNameRequired' | translate | titlecase}}</div>
+                    <div *ngIf="formControls.fullName.errors.minlength">{{'card.fullNameShouldHaveAtleast4characters' | translate | titlecase}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-12">
+            <label for="cardNumber">{{'card.cardNumber' | translate | titlecase}}</label>
+            <div class="input-group">
+                <input type="text" formControlName="cardNumber" creditCard class="form-control border-right-0"
+                    [ngClass]="{ 'is-invalid': submitted && formControls.cardNumber.errors }" />
+                <div class="input-group-append">
+                    <span class="input-group-text txt-green border-left-0 bg-white"
+                        [ngClass]="{'border border-danger': submitted && formControls.cardNumber.errors }">
+                        <i class="fa fa-credit-card"></i>
+                    </span>
+                </div>
+                <div *ngIf="submitted && formControls.cardNumber.errors" class="invalid-feedback">
+                    <div *ngIf="formControls.cardNumber.errors.required">{{'card.cardNumberRequired' | translate | titlecase}}</div>
+                    <div *ngIf="formControls.cardNumber.errors.pattern">{{'card.cardNumberInvalid' | translate | titlecase}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="expireDate">{{'card.expireDate' | translate | titlecase}}</label>
+            <div class="input-group">
+                <input type="string" formControlName="expireDate" class="form-control border-right-0"
+                    [ngClass]="{ 'is-invalid': submitted && formControls.expireDate.errors }" />
+                <div class="input-group-append">
+                    <span class="input-group-text txt-green border-left-0 bg-white"
+                        [ngClass]="{'border border-danger': submitted && formControls.expireDate.errors }">
+                        <i class="fa fa-calendar"></i>
+                    </span>
+                </div>
+                <div *ngIf="submitted && formControls.expireDate.errors" class="invalid-feedback">
+                    <div *ngIf="formControls.expireDate.errors.required">{{'card.expireDateRequired' | translate | titlecase}}</div>
+                    <div *ngIf="formControls.expireDate.errors.pattern">{{'card.expireDateInvalid' | translate | titlecase}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="cvv">{{'card.cvv' | translate | titlecase}}</label>
+            <div class="input-group">
+                <input type="password" formControlName="cvv" class="form-control border-right-0"
+                    [ngClass]="{ 'is-invalid': submitted && formControls.cvv.errors }" />
+                <div class="input-group-append">
+                    <span class="input-group-text txt-green border-left-0 bg-white"
+                        [ngClass]="{'border border-danger': submitted && formControls.cvv.errors }">
+                        <i class="fa fa-lock"></i>
+                    </span>
+                </div>
+                <div *ngIf="submitted && formControls.cvv.errors" class="invalid-feedback">
+                    <div *ngIf="formControls.cvv.errors.required">{{'card.cvvRequired' | translate | titlecase}}</div>
+                    <div *ngIf="formControls.cvv.errors.pattern">{{'card.cvvInvalid' | translate | titlecase}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button class="btn bg-green  float-right">{{'card.payNow' | translate | titlecase}}<i class="fa fa-arrow-right"></i></button>
+    </div>
+</form>

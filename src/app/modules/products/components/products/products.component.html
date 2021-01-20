@@ -1,0 +1,60 @@
+<div class="container-fluid">
+    <div class="row justify-content-around">
+        <div class="col-md-2 category txt-green">
+            <div>
+                <h5 class="btn categories" (click)="searchField = ''"><strong>{{'productsPage.categories' |
+                        translate | uppercase}}</strong></h5>
+            </div>
+            <div>
+                <h4 class="btn categories" (click)="searchField = 'vegetables'">{{'productsPage.vegetables' |
+                    translate | titlecase}}</h4>
+            </div>
+            <div>
+                <h4 class="btn categories" (click)="searchField = 'fruits'">{{'productsPage.fruits' | translate
+                    | titlecase}}</h4>
+            </div>
+            <div>
+                <h4 class="btn categories" (click)="searchField = 'snacks'">{{'productsPage.snacks' | translate
+                    | titlecase}}</h4>
+            </div>
+            <div>
+                <h4 class="btn categories" (click)="searchField = 'chicken'">{{'productsPage.chicken' |
+                    translate | titlecase}}</h4>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="row justify-content-start search">
+                <div class="col-md-8">
+                    <div class="input-group">
+                        <input type="text" class="form-control rounded-pill" id="search" name="search"
+                            placeholder="search ..." [(ngModel)]="searchField">
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-start">
+                <div class="col-md-3 border-0"
+                    *ngFor="let product of products | search:searchField ;index as i;trackBy:product?.id">
+                    <div class="card">
+                        <div><a class="image" [routerLink]="['/products',product.id]"><img [src]="product.imageUrl"
+                                    height="100px" alt="image not found"></a></div>
+                        <div class="prod-name"><strong>{{product.name | titlecase}}</strong></div>
+                        <ng-container *ngIf="product.price">
+                            <div class="price"><span [ngClass]="product.discount?'old-price':''">{{product.price
+                                    | currency:'INR'}}</span>&nbsp;&nbsp;&nbsp;
+                                <span *ngIf="product.discount" class="discount-price txt-green">{{product.discount |
+                                    discountPrice:product.price | currency:'INR'}}
+                                </span>
+                            </div>
+                            <div class="price"><span *ngFor="let dummy of ' '.repeat(5).split('');index as i"
+                                    [ngClass]="(i < product.ratings)?'txt-green':''"><i class="fa fa-star"></i></span>
+                            </div>
+                            <button class='btn btn-md bg-green add-cart rounded-pill'
+                                (click)="addToCart($event,product.id,product.name)">{{'productsPage.addToCart' |
+                                translate |titlecase}}</button>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+.bg-green{
+    background-color: #25bd01;
+    color: white;
+}
+
+.txt-green{
+    color: #25bd01;
+}
+
+.bg-light-green{
+    background-color:#dbffd9;
+    color: white;
+}
+
+.bg-blue{
+    background-color: #121935;
+    color: white;
+}
+
+.gray-bg{
+    background-color: #f3f3f3;
+}
+
+
+.lato
+{
+    font-family: 'lato', sans-serif;
+}
+
+.poppins{
+    font-family: 'Poppins', sans-serif;
+}
+
+.open-sans{
+    font-family: 'Open Sans', sans-serif;
+}
+

@@ -1,0 +1,9 @@
+.select{
+    background: #25bd01;
+    border: hidden;
+    color: white;
+}
+
+.fixed{
+    position: fixed;
+}

@@ -1,0 +1,140 @@
+[
+    {
+        "id": 1111,
+        "name": "orange",
+        "price": 100.00,
+        "discount": 20,
+        "imageUrl": "/assets/images/food/orange.PNG",
+        "type": "fruits",
+        "description": "The orange is the fruit of various citrus species in the family Rutaceae; it primarily refers to Citrus × sinensis, which is also called sweet orange, to distinguish it from the related Citrus × aurantium, referred to as bitter orange",
+        "ratings": 4
+    },
+    {
+        "id": 2222,
+        "name": "orange",
+        "price": 100.00,
+        "discount": 10,
+        "imageUrl": "/assets/images/food/orange.PNG",
+        "type": "fruits",
+        "description": "The orange is the fruit of various citrus species in the family Rutaceae; it primarily refers to Citrus × sinensis, which is also called sweet orange, to distinguish it from the related Citrus × aurantium, referred to as bitter orange",
+        "ratings": 5
+    },
+    {
+        "id": 3333,
+        "name": "orange",
+        "price": 100.00,
+        "imageUrl": "/assets/images/food/orange.PNG",
+        "type": "fruits",
+        "description": "The orange is the fruit of various citrus species in the family Rutaceae; it primarily refers to Citrus × sinensis, which is also called sweet orange, to distinguish it from the related Citrus × aurantium, referred to as bitter orange",
+        "ratings": 1
+    },
+    {
+        "id": 4444,
+        "name": "grapes",
+        "price": 200.55,
+        "discount": 10,
+        "imageUrl": "/assets/images/food/grapes.PNG",
+        "type": "fruits",
+        "description": "A grape is a fruit, botanically a berry, of the deciduous woody vines of the flowering plant genus Vitis. Grapes can be eaten fresh as table grapes or they can be used for making wine, jam, grape juice, jelly, grape seed extract, raisins, vinegar, and grape seed oil",
+        "ratings": 3
+    },
+    {
+        "id": 5555,
+        "name": "avocada",
+        "price": 500.00,
+        "discount": 20,
+        "imageUrl": "/assets/images/food/avocada.PNG",
+        "type": "fruits",
+        "description": "The avocado, a tree likely originating from south central Mexico, is classified as a member of the flowering plant family Lauraceae. The fruit of the plant, also called an avocado, is botanically a large berry containing a single large seed.",
+        "ratings": 2
+    },
+    {
+        "id": 6666,
+        "name": "bell pepper",
+        "price": 100.99,
+        "discount": 50,
+        "imageUrl": "/assets/images/food/bellPepper.PNG",
+        "type": "vegetables",
+        "description": "The bell pepper is the fruit of plants in the Grossum cultivar group of the species Capsicum annuum. Cultivars of the plant produce fruits in different colours, including red, yellow, orange, green, white, and purple. Bell peppers are sometimes grouped with less pungent pepper varieties as 'sweet peppers'",
+        "ratings": 5
+    },
+    {
+        "id": 7777,
+        "name": "boiler chicken",
+        "price": 800.34,
+        "discount": 3,
+        "imageUrl": "/assets/images/food/chicken.PNG",
+        "type": "chicken",
+        "description": "Chicken is the most common type of poultry in the world. Owing to the relative ease and low cost of raising them in comparison to animals such as cattle or hogs, chickens have become prevalent throughout the cuisine of cultures around the world, and their meat has been variously adapted to regional tastes",
+        "ratings": 5
+    },
+    {
+        "id": 8888,
+        "name": "cabbage",
+        "price": 500.00,
+        "discount": 20,
+        "imageUrl": "/assets/images/food/cabbage.PNG",
+        "type": "vegetables",
+        "description": "Cabbage is a leafy green, red, or white biennial plant grown as an annual vegetable crop for its dense-leaved heads. It is descended from the wild cabbage, and belongs to the 'cole crops' or brassicas, meaning it is closely related to broccoli and cauliflower; Brussels sprouts; and Savoy cabbage",
+        "ratings": 3
+    },
+    {
+        "id": 9999,
+        "name": "chicken",
+        "price": 500.46,
+        "discount": 20,
+        "imageUrl": "/assets/images/food/chicken.PNG",
+        "type": "chicken",
+        "description": "Chicken is the most common type of poultry in the world. Owing to the relative ease and low cost of raising them in comparison to animals such as cattle or hogs, chickens have become prevalent throughout the cuisine of cultures around the world, and their meat has been variously adapted to regional tastes",
+        "ratings": 2
+    },
+    {
+        "id": 1112,
+        "name": "mixed fruits",
+        "price": 500.00,
+        "discount": 20,
+        "imageUrl": "/assets/images/food/mixedFruits.PNG",
+        "type": "fruits",
+        "ratings": 3
+    },
+    {
+        "id": 1113,
+        "name": "pineapple",
+        "price": 300.66,
+        "discount": 70,
+        "imageUrl": "/assets/images/food/pineApple.PNG",
+        "type": "fruits",
+        "description": "The pineapple is a tropical plant with an edible fruit and the most economically significant plant in the family Bromeliaceae. The pineapple is indigenous to South America, where it has been cultivated for many centuries",
+        "ratings": 2
+    },
+    {
+        "id": 1114,
+        "name": "cutlet",
+        "price": 300.00,
+        "discount": 70,
+        "imageUrl": "/assets/images/food/snack02.PNG",
+        "type": "snacks",
+        "description": "Cutlet refers to a thin slice of meat from the leg or ribs of veal, pork, chicken, or mutton a dish made of such slice, often breaded (also known in various languages as a cotoletta, Kotelett, kotlet or kotleta) a croquette or cutlet-shaped patty made of ground meat a kind of fish cut where the fish is sliced perpendicular to the spine, rather than parallel (as with fillets); often synonymous with steak a prawn or shrimp with its head and outer shell removed, leaving only the flesh and tail a mash of vegetables (usually potatoes) fried with bread",
+        "ratings": 4
+    },
+    {
+        "id": 1115,
+        "name": "potato fry",
+        "price": 200.11,
+        "discount": 70,
+        "imageUrl": "/assets/images/food/snack02.PNG",
+        "type": "snacks",
+        "description": "French fries, or simply fries, chips, finger chips, or French-fried potatoes, are batonnet or allumette-cut deep-fried potatoes",
+        "ratings": 2
+    },
+    {
+        "id": 1116,
+        "name": "strawberry",
+        "price": 550.34,
+        "discount": 9,
+        "imageUrl": "/assets/images/food/strawberry.PNG",
+        "type": "fruits",
+        "description": "The garden strawberry is a widely grown hybrid species of the genus Fragaria, collectively known as the strawberries, which are cultivated worldwide for their fruit. The fruit is widely appreciated for its characteristic aroma, bright red color, juicy texture, and sweetness",
+        "ratings": 5
+    }
+]

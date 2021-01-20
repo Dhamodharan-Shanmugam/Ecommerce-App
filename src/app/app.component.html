@@ -1,0 +1,21 @@
+<div class='container-fluid'>
+    <div class="row bg-green">
+        <div class="col">
+            <select #lang (click)='changeLanguage(lang.value)' class='gb-green select'>
+                <option name='english' id='english' value="en">English</option>
+                <option name='spanish' id='spanish' value="sp">Spanish</option>
+            </select>
+            <!-- <select #curency class='gb-green'>
+                <option name='usd' id='usd' value="usd">USD-$</option>
+                <option name='rupee' id='rupee' value="rupee">Rupee-₹</option>
+            </select> -->
+        </div>
+    </div>
+</div>
+<app-header class="lato"></app-header>
+
+<div class="container-fluid lato">
+    <router-outlet></router-outlet>
+</div>
+
+<app-footer class="lato"></app-footer>

@@ -1,0 +1,16 @@
+a{
+    color: rgb(124, 119, 119);
+}
+
+.active1 a{
+    color: white;
+}
+
+.badge {
+    border-radius: 10px;
+    padding: 3px 7px;
+}
+
+.cursor{
+    cursor: pointer;
+}

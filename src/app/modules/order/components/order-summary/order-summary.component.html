@@ -1,0 +1,33 @@
+<div>
+    <h6 class="heading"><strong>{{'summary.orderSummary' | translate | titlecase}}:</strong></h6>
+    <hr>
+    <div class="row">
+        <div class="col-md-12">
+            <div *ngFor="let product of cartProducts;index as i;trackBy:product?.id">
+                <div class="row justify-content-start">
+                    <div class="col-6">
+                        <img [src]='product?.product.imageUrl' height="100px" alt="image not found">
+                    </div>
+                    <div class="col-6">
+                        <div class="pb-2">{{product?.product.name | titlecase}}</div>
+                        <div class="pb-2">{{'summary.quantity' | translate | titlecase}}: {{product?.quantity}}</div>
+                        <div class="pb-2">{{'summary.price' | translate | titlecase}}: <span class="price">{{product?.product.discount |
+                                discountPrice:product?.product.price * product?.quantity |
+                                currency:'INR':'symbol':'.2-2'}}</span></div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div *ngIf="discountPrice">
+                <h6>{{'summary.subTotal' | translate | titlecase}}: <strong class="txt-green amount">{{discountPrice |
+                        currency:'INR':'symbol':'.2-2'}}</strong></h6>
+                <h6>{{'summary.shipping' | translate | titlecase}}: <strong class="txt-green amount">{{shippingPrice |
+                        currency:'INR':'symbol':'.2-2'}}</strong></h6>
+                <hr>
+                <h6>{{'summary.totalAmount' | translate | titlecase}}: <strong class="txt-green amount">{{cartPrice |
+                        currency:'INR':'symbol':'.2-2'}}</strong></h6>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>

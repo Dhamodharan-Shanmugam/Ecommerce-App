@@ -1,0 +1,28 @@
+.mini-cart{
+    margin: 10px 0;
+    background: white;
+    color: black;
+    width: 300px;    
+    position: absolute;
+    float: right;
+    border-radius: 3px;
+    padding: 20px;
+    transform: translateX(-260px);
+    z-index: 1;    
+}
+
+.arrow{
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+    margin-bottom: -10px;
+    margin-right: auto;
+}
+
+.product{
+    max-height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}

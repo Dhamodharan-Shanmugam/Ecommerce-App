@@ -1,0 +1,42 @@
+.banner1{
+    margin: auto;
+    background-color: #f3f3f3;
+    padding-left:20px ;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;    
+    font-size: x-large;
+    padding-top: 50px;
+}
+
+.banner2{
+    margin-top: 40px;
+    background-color: #f3f3f3;
+    margin-bottom: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+.banner3{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.banner3  .col-lg-3{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+
+.banner4{
+    padding: 20px;
+    margin: auto;    
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 600px){
+.banner4 .col-md-4 img{
+    width: 200px;
+}
+}

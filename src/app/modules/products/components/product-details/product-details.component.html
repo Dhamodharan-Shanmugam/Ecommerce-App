@@ -1,0 +1,32 @@
+<ng-container *ngIf="product">
+    <div class="row">
+        <div class="col">
+            <button class='btn btn-md back bg-green' (click)="goBack()">
+                <i class="fa fa-arrow-left"></i> {{'productsPage.back' | translate |titlecase}}</button>
+        </div>
+    </div>
+    <div class="row product justify-content-center">
+        <div class="col-md-4">
+            <img class="img-responsive" [src]="product.imageUrl" height="250px" alt="image not found">
+        </div>
+        <div class="col-md-6">
+            <h2 class="txt-green"><strong>{{product?.name | titlecase}}</strong></h2>
+            <div class="text-left ratings">
+                <span *ngFor="let dummy of ' '.repeat(5).split('');index as i"
+                    [ngClass]="(i < product.ratings)?'txt-green':''"><i class="fa fa-star"></i></span>
+            </div>
+            <p>{{product.description}}</p>
+            <div><span [ngClass]="product.discount?'old-price':''">{{product.price |
+                    currency:'INR'}}</span>&nbsp;&nbsp;
+                <span *ngIf="product.discount" class="discount-price txt-green">{{product.discount |
+                    discountPrice:product.price | currency:'INR'}}
+                </span>
+            </div>
+            <div class="cart-btn">
+                <button *ngIf="product.price" class='btn btn-block bg-green'
+                    (click)="addToCart(product.id,product.name)">{{'productsPage.addToCart' |
+                    translate |titlecase}}</button>
+            </div>
+        </div>
+    </div>
+</ng-container>

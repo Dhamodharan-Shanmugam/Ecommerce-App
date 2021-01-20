@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg bg-blue">
+    <a class="navbar-brand" [routerLink]="['home']"><img src="\assets\images\logo.PNG" height="100px"
+            alt="image not found"></a>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item" [routerLinkActive]="['active','active1']">
+            <a class="nav-link" [routerLink]="['/home']">{{'header.home' | translate}}</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active','active1']">
+            <a class="nav-link" [routerLink]="['/products']">{{'header.products' | translate}}</a>
+        </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+        <ng-container *ngIf="!userName">
+            <li class="nav-item" [routerLinkActive]="['active','active1']">
+                <a class="nav-link" [routerLink]="['/logging']">{{'header.signin' | translate}}</a>
+            </li>
+        </ng-container>
+        <ng-container *ngIf="userName">
+            <li class="nav-item">
+                <a class="nav-link"><i class="fa fa-user-circle"></i> {{'header.hello' | translate}},
+                    {{userName | titlecase}}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link cursor" (click)="signOut()">{{'header.signout' |
+                    translate}}</a>
+            </li>
+        </ng-container>
+        <li class="nav-item">
+            <a class="nav-link cursor" (customeClick)="openMincart = $event">
+                <i class="fa fa-shopping-cart"></i>
+                <span *ngIf="toatlItem > 0" class="badge bg-green">{{toatlItem}}</span>
+            </a>
+            <app-mini-cart [ngStyle]="{'display':openMincart?'flex':'none'}"></app-mini-cart>
+        </li>
+        <!-- <li class="nav-item" [routerLinkActive]="['active','active1']">
+            <a class="nav-link" [routerLink]="['/cart','summary']">{{'header.cart' | translate}}</a>
+        </li> -->
+    </ul>
+</nav>

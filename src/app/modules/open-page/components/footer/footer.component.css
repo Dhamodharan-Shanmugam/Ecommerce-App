@@ -1,0 +1,47 @@
+.topic{
+font-size: larger;
+}
+
+.copyright{
+    font-size:small;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.visa{
+    background: url(/assets/images/creditCard.png) -18px -20px;
+    background-size: 402px;
+    width: 35px;
+    height: 25px;
+    margin-right: 5px;
+    float: right;
+}
+
+.master{
+    background: url(/assets/images/creditCard.png) -61px -20px;
+    background-size: 402px;
+    width: 35px;
+    height: 25px;
+    margin-right: 5px;
+    float: right;
+}
+
+.discover{
+    background: url(/assets/images/creditCard.png) -61px -113px;
+    background-size: 402px;
+    width: 35px;
+    height: 25px;
+    margin-right: 5px;
+    float: right;
+}
+
+.americanExpress{
+    background: url(/assets/images/creditCard.png) -61px -175px;
+    background-size: 402px;
+    width: 35px;
+    height: 25px;
+    margin-right: 5px;
+    float: right;
+}

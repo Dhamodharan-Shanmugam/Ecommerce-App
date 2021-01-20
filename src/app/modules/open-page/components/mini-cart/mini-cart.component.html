@@ -1,0 +1,37 @@
+<div class="arrow"></div>
+<div class="mini-cart border">
+    <ng-container *ngIf="!cartEmpty">
+        <div class="product">
+            <div *ngFor="let product of cartProducts;index as i;trackBy:product?.id">
+                <div class="row justify-content-start">
+                    <div class="col-md-3">
+                        <div><a [routerLink]="['/products',product.id]"><img [src]='product?.product.imageUrl'
+                                    height="50px" alt="image not found"></a></div>
+                    </div>
+                    <div class='col-md-5'>
+                        <div>{{product?.product.name | titlecase}}</div>
+                        <div class="txt-green">{{product?.product.discount | discountPrice:product?.product.price *
+                            product?.quantity |
+                            currency:'INR':'symbol':'.2-2'}}</div>
+                    </div>
+                    <div class="col-md-2">
+                        <div><button class="btn btn-sm" (click)="deleteProduct(product?.id)"><i
+                                    class="fa fa-times"></i></button></div>
+                    </div>
+                </div>
+                <hr style="margin-right: 20px;">
+            </div>
+        </div>
+    </ng-container>
+    <div><span><button class="btn btn-sm" (click)="cleanCart()"><i class="fa fa-trash"></i> {{'miniCart.cleanCart' | translate | titlecase}}</button></span>
+        <span class="float-right txt-green">{{'miniCart.subTotal' | translate | titlecase}}:{{cartPrice | currency:'INR':'symbol':'.2-2'}}</span>
+    </div>
+    <hr>
+
+    <div>
+        <button class="btn btn-sm rounded-pill border" [routerLink]="['/cart','summary']"
+            [disabled]="cartEmpty">{{'miniCart.viewCart' | translate | titlecase}}</button>
+        <button class="float-right btn btn-sm bg-green rounded-pill" [routerLink]="['/order']"
+            [disabled]="cartEmpty">{{'miniCart.checkout' | translate | titlecase}}</button>
+    </div>
+</div>

@@ -1,0 +1,131 @@
+<div class="back-btn">
+    <button class="btn bg-green" (click)="goBack()">
+        <i class="fa fa-arrow-left"></i> Back </button>
+</div>
+
+<div class="cart">
+    <div class="row text-center bg-table-green product-padding mb-4">
+        <div class="col">
+            <div>{{'cartPage.image' | translate | titlecase}}</div>
+        </div>
+        <div class="col">
+            <div>{{'cartPage.products' | translate | titlecase}}</div>
+        </div>
+        <div class="col">
+            <div>{{'cartPage.price' | translate | titlecase}}</div>
+        </div>
+        <div class="col">
+            <div>{{'cartPage.discountPrice' | translate | titlecase}}</div>
+        </div>
+        <div class="col">
+            <div>{{'cartPage.quantity' | translate | titlecase}}</div>
+        </div>
+        <div class="col">
+            <div>{{'cartPage.total' | translate | titlecase}}</div>
+        </div>
+        <div class="col">
+            <div><i class="border border-dark fa fa-times"></i></div>
+        </div>
+    </div>
+
+    <ng-container *ngIf="!cartEmpty">
+        <div *ngFor="let product of cartProducts;index as i;trackBy:product?.id" class="text-center product-padding">
+            <div class="row">
+                <div class="col">
+                    <div><a [routerLink]="['/products',product.id]"><img [src]='product?.product.imageUrl'
+                                alt="image not found" height="50px"></a></div>
+                </div>
+                <div class='col'>
+                    <div>{{product?.product.name | titlecase}}</div>
+                </div>
+                <div class="col">
+                    <div>{{product?.product.price | currency:'INR':'symbol':'.2-2'}}</div>
+                </div>
+                <div class="col txt-green">
+                    <div>{{product?.product.discount | discountPrice:product?.product.price |
+                        currency:'INR':'symbol':'.2-2'}}</div>
+                </div>
+                <div class="col">
+                    <div><button class="border-0 bg-white"><i class="fa fa-plus-circle fa-lg txt-green"
+                                (click)="addQuantity(product?.id)"></i></button>&nbsp;
+                        {{product?.quantity}}&nbsp;
+                        <button class="border-0 bg-white"><i class="fa fa-minus-circle fa-lg text-danger"
+                                (click)="removeQuantity(product?.id)"></i></button>
+                    </div>
+                </div>
+                <div class="col txt-green">
+                    <div>{{product?.product.discount | discountPrice:product?.product.price * product?.quantity |
+                        currency:'INR':'symbol':'.2-2'}}</div>
+                </div>
+                <div class="col">
+                    <div><button class="btn btn-sm" (click)="deleteProduct(product?.id)"><i
+                                class="fa fa-times"></i></button></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+    </ng-container>
+    <ng-container *ngIf="cartEmpty">
+        <div class="row text-center">
+            <div class="col">
+                <div>--</div>
+            </div>
+            <div class="col">
+                <div>--</div>
+            </div>
+            <div class="col">
+                <div>--</div>
+            </div>
+            <div class="col">
+                <div>--</div>
+            </div>
+            <div class="col">
+                <div>--</div>
+            </div>
+            <div class="col">
+                <div>--</div>
+            </div>
+            <div class="col">
+                <div>--</div>
+            </div>
+        </div>
+    </ng-container>
+</div>
+
+<div class='row justify-content-between product-table gray-bg mb-4 p-3 border'>
+    <div class='col-sm-5'>
+        <div>
+            <h5>{{'cartPage.cartTotal' | translate | titlecase}}
+                <span class="radiant float-right">
+                    <h6> {{'cartPage.freeShippingOnAllOrdersAbove' | translate | titlecase}} {{'500' |
+                        currency:'INR':'symbol':'.2-2'}}</h6>
+                </span>
+            </h5>
+        </div>
+        <hr>
+        <div>
+            <h6>{{'cartPage.totalPrice' | translate | titlecase}} <span class="float-right txt-green"> {{totalPrice |
+                    currency:'INR':'symbol':'.2-2'}}</span></h6>
+        </div>
+        <div>
+            <h6>{{'cartPage.discountPrice' | translate | titlecase}}<span class="float-right text-danger">
+                    {{discountPrice-totalPrice| currency:'INR':'symbol':'.2-2'}}</span></h6>
+        </div>
+        <div>
+            <h6>{{'cartPage.shippingPrice' | translate | titlecase}}<span
+                    class="float-right txt-green"><small>+</small>{{shippingPrice |
+                    currency:'INR':'symbol':'.2-2'}}</span></h6>
+        </div>
+        <hr>
+        <div>
+            <h6>{{'cartPage.payableAmount' | translate | titlecase}}<span class="float-right txt-green"> {{cartPrice |
+                    currency:'INR':'symbol':'.2-2'}}</span></h6>
+        </div>
+        <hr>
+    </div>
+    <div *ngIf="!cartEmpty" class='col-sm-3 check-out'>
+        <button class="btn btn-block bg-green" [routerLink]="['/order']">{{'cartPage.proceedToCheckOut' |
+            translate | titlecase}}</button>
+    </div>
+</div>

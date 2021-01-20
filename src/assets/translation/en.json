@@ -1,0 +1,138 @@
+{
+    "header": {
+        "home": "Home",
+        "products":"Products",
+        "signin":"sign-in",
+        "hello":"hello",
+        "cart":"Cart",
+        "signout":"sign-out"
+    },
+    "footer":{
+        "about":"About",
+        "categories":"Categories",
+        "latestProducts":"Latest Products",
+        "fruits&drinks":"Fruits & Drinks",
+        "computer":"Computer",
+        "food":"Food",
+        "ourCompany":"Our Company",
+        "delivary":"Delivary",
+        "legalNotice":"Legal Notice",
+        "terms&conditions":"Terms & Conditions Of Use",
+        "downloadApp":"Download App",
+        "copyright":"Copyright 2021 By NextSphere.com"
+
+    },
+    "home":{
+        "buyYour":"Buy Your",
+        "favouriteFresh":"Favourite Fresh",
+        "foodAndGetUpto70%Offer":"Food And Get Upto 70% Offer",
+        "orderNow":"Order Now",
+        "freshPinapple":"Fresh Pineapple",
+        "healthyFood":"Healthy Food",
+        "discount":"Discount",
+        "freeDelivery":"Free Delivery",
+        "shopNow":"Shop Now",
+        "freeShipping":"Free Shipping",
+        "onAllOrdersOver$99":"On All Orders Over $99",
+        "easyReturn":"Easy Return",
+        "30DaysReturnPolicy":"30 Days Return Policy",
+        "securePayment":"Secure Payment",
+        "support":"Support",
+        "deticated":"Deticated",
+        "freshBrolyerChicken":"Fresh Brolyer Chicken",
+        "bigSale40%Offer": "Big Sale 40% Offer",
+        "addToCart":"Add To Cart"
+    },
+    "productsPage":{
+        "categories":"categories",
+        "vegetables":"vegetables",
+        "fruits":"fruits",
+        "snacks":"snacks",
+        "chicken":"chicken",
+        "addToCart":"add to cart",
+        "back":"back"
+    },
+    "cartPage":{
+        "image":"image",
+        "products":"Products",
+        "price":"price",
+        "discountPrice":"discount price",
+        "quantity":"quantity",
+        "total":"total",
+        "delete":"delete",
+        "cartTotal":"cart total",
+        "freeShippingOnAllOrdersAbove":"free shipping on all orders above",
+        "totalPrice":"total price",
+        "discount":"discount",
+        "shippingPrice":"shipping price",
+        "payableAmount":"payable amount",
+        "proceedToCheckOut":"proceed to check out"
+    },
+    "signIn":{
+        "signIn":"sign-in",
+        "userName":"user name",
+        "userNameRequired":"user name required",
+        "userNameShouldHaveAtleast4characters":"user name should have atleast 4 characters",
+        "password":"password",
+        "passwordRequired":"password required"
+    },
+    "miniCart":{
+        "cleanCart":"clean cart",
+        "subTotal":"sub-total",
+        "viewCart":"view cart",
+        "checkout":"check out"
+    },
+    "billing":{
+        "billingInformation":"billing information",
+        "firstName":"first name",
+        "firstNameRequired":"first name required",
+        "firstNameShouldHaveAtleast4characters":"first name should have atleast 4 characters",
+        "lastName":"last name",
+        "lastNameRequired":"last name required",
+        "lastNameShouldHaveAtleast4characters":"last name should have atleast 4 characters",
+        "email":"email",
+        "emailRequired":"email name required",
+        "phoneNumber":"phone number",
+        "phoneNumberRequired":"phon number required",
+        "notAPhoneNumber":"not a phone number",
+        "address":"address",
+        "addressRequired":"address required",
+        "city":"city",
+        "cityRequired":"city required",
+        "country":"country",
+        "countryRequired":"country required",
+        "zipcode":"zipcode",
+        "zipcodeRequired":"zipcode required",
+        "continue":"continue"
+    },
+    "card":{
+        "cardInformation":"card information",
+        "fullName":"full name",
+        "fullNameRequired":"full name required",
+        "fullNameShouldHaveAtleast4characters":"full name should have atleast 4 characters",
+        "cardNumber":"card number",
+        "cardNumberRequired":"card number required",
+        "cardNumberInvalid":"card number invalid",
+        "expireDate":"expire date",
+        "expireDateRequired":"expire date required",
+        "expireDateInvalid":"expire date invalid",
+        "cvv":"cvv",
+        "cvvRequired":"cvv required",
+        "cvvInvalid":"cvv invalid",
+        "payNow":"pay now"
+    },
+    "conformation":{
+        "congratulations":"congratulations",
+        "successfullyCompleted":"successfully completed",
+        "order":"order",
+        "backToProductsPage":"back to products page"
+    },
+    "summary":{
+        "orderSummary":"order summary",
+        "quantity":"quantity",
+        "price":"price",
+        "subTotal":"sub total",
+        "shipping":"shipping",
+        "totalAmount":"total amount"
+    }
+}
